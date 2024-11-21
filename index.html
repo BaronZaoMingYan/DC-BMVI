@@ -175,63 +175,109 @@ Extensive experiments demonstrate that the proposed DC-BMFI surpasses state-of-t
   </div>
 </section>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
+<section class="section">
+  <div class="container is-max-desktop">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/gifes/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+		  <div class="header_dark_gray">
+				<h2 class="title is-3">Comparisons to prior work</h2>
+			</div>
+			<div class="content has-text-justified">
+				<p>
+				Below we compare VIDIM to other methods in the literature. The two input frames are shown at the left, and the output for the selected method is shown at the right. Click below to change the model!
+				</p>
+			</div>
+			<div class="row" id="comparisons-select" style="text-align: center;">
+				<div class="col"> Blur </div>
+				<div class="col"> QVI </div>
+				<div class="col"> EQVI </div>
+				<div class="col"> IQ-VFI </div>
+				<div class="col selected"> Ours </div>
       </div>
-    </div>
-  </div>
-</section>
+      <div id="comparisons-show">
+      	<div class="item"> 
+			<div class="row"> 
+				<div class="col"><img src="./static/gifes/08_blur.gif" alt="GIF blur"></div> 
+				<div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div>
+				<!-- <div class="col"><img src="./static/gifes/08_qvi.gif" alt="GIF qvi"></div> 
+				<div class="col"><img src="./static/gifes/08_eqvi.gif" alt="GIF eqvi"></div> 
+				<div class="col"><img src="./static/gifes/08_iqvfi.gif" alt="GIF iqvfi"></div> -->
+				<div class="col"><img src="./static/gifes/08_ours.gif" alt="GIF ours"></div> 
+				<!-- <div class="col"><img src="./static/gifes/08_gt.gif" alt="GIF gt"></div> -->
+			</div>
+		</div>
 
+		<div class="item"> 
+			<div class="row"> 
+				<div class="col"><img src="./static/gifes/09_blur.gif" alt="GIF blur"></div> 
+				<div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div>
+				<!-- <div class="col"><img src="./static/gifes/09_qvi.gif" alt="GIF qvi"></div> 
+				<div class="col"><img src="./static/gifes/09_eqvi.gif" alt="GIF eqvi"></div> 
+				<div class="col"><img src="./static/gifes/09_iqvfi.gif" alt="GIF iqvfi"></div> -->
+				<div class="col"><img src="./static/gifes/09_ours.gif" alt="GIF ours"></div> 
+				<!-- <div class="col"><img src="./static/gifes/09_gt.gif" alt="GIF gt"></div> -->
+			</div>
+		</div>
+
+		<div class="item"> 
+			<div class="row"> 
+				<div class="col"><img src="./static/gifes/10_blur.gif" alt="GIF blur"></div> 
+				<div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div>
+				<!-- <div class="col"><img src="./static/gifes/10_qvi.gif" alt="GIF qvi"></div> 
+				<div class="col"><img src="./static/gifes/10_eqvi.gif" alt="GIF eqvi"></div> 
+				<div class="col"><img src="./static/gifes/10_iqvfi.gif" alt="GIF iqvfi"></div> -->
+				<div class="col"><img src="./static/gifes/10_ours.gif" alt="GIF ours"></div> 
+				<!-- <div class="col"><img src="./static/gifes/10_gt.gif" alt="GIF gt"></div> -->
+			</div>
+		</div>
+		<div class="item"> 
+			<div class="row"> 
+				<div class="col"><img src="./static/gifes/11_blur.gif" alt="GIF blur"></div> 
+				<div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div>
+				<!-- <div class="col"><img src="./static/gifes/11_qvi.gif" alt="GIF qvi"></div> 
+				<div class="col"><img src="./static/gifes/11_eqvi.gif" alt="GIF eqvi"></div> 
+				<div class="col"><img src="./static/gifes/11_iqvfi.gif" alt="GIF iqvfi"></div> -->
+				<div class="col"><img src="./static/gifes/11_ours.gif" alt="GIF ours"></div> 
+				<!-- <div class="col"><img src="./static/gifes/11_gt.gif" alt="GIF gt"></div> -->
+			</div>
+		</div>
+		<div class="item"> 
+			<div class="row"> 
+				<div class="col"><img src="./static/gifes/12_blur.gif" alt="GIF blur"></div> 
+				<div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div>
+				<!-- <div class="col"><img src="./static/gifes/12_qvi.gif" alt="GIF qvi"></div> 
+				<div class="col"><img src="./static/gifes/12_eqvi.gif" alt="GIF eqvi"></div> 
+				<div class="col"><img src="./static/gifes/12_iqvfi.gif" alt="GIF iqvfi"></div> -->
+				<div class="col"><img src="./static/gifes/12_ours.gif" alt="GIF ours"></div> 
+				<!-- <div class="col"><img src="./static/gifes/12_gt.gif" alt="GIF gt"></div> -->
+			</div>
+		</div>
+		<div class="item"> 
+			<div class="row"> 
+				<div class="col"><img src="./static/gifes/13_blur.gif" alt="GIF blur"></div> 
+				<div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div>
+				<!-- <div class="col"><img src="./static/gifes/13_qvi.gif" alt="GIF qvi"></div> 
+				<div class="col"><img src="./static/gifes/13_eqvi.gif" alt="GIF eqvi"></div> 
+				<div class="col"><img src="./static/gifes/13_iqvfi.gif" alt="GIF iqvfi"></div> -->
+				<div class="col"><img src="./static/gifes/13_ours.gif" alt="GIF ours"></div> 
+				<!-- <div class="col"><img src="./static/gifes/13_gt.gif" alt="GIF gt"></div> -->
+			</div>
+		</div>
+		<div class="item"> 
+			<div class="row"> 
+				<div class="col"><img src="./static/gifes/12_blur.gif" alt="GIF blur"></div> 
+				<div class="col" style="width: 12rem;"> <div class="right_arrow"></div></div>
+				<!-- <div class="col"><img src="./static/gifes/12_qvi.gif" alt="GIF qvi"></div> 
+				<div class="col"><img src="./static/gifes/12_eqvi.gif" alt="GIF eqvi"></div> 
+				<div class="col"><img src="./static/gifes/12_iqvfi.gif" alt="GIF iqvfi"></div> -->
+				<div class="col"><img src="./static/gifes/12_ours.gif" alt="GIF ours"></div> 
+				<!-- <div class="col"><img src="./static/gifes/12_gt.gif" alt="GIF gt"></div> -->
+			</div>
+		</div>
+
+    </div>
+  <div>
+</div>
+</section>
 
 
 
