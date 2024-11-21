@@ -85,6 +85,11 @@ $(document).ready(function() {
     	});
     }
 
+    var videoList = document.getElementsByTagName("video");
+    for (const video of videoList) {
+			observer.observe(video)
+		}
+    
     // Access to bulmaCarousel instance of an element
     var element = document.querySelector('#my-element');
     if (element && element.bulmaCarousel) {
@@ -112,9 +117,6 @@ $(document).ready(function() {
 
     bulmaSlider.attach();
 
-    var videoList = document.getElementsByTagName("video");
-    for (const video of videoList) {
-			observer.observe(video)
-		}
+
 
 })
