@@ -113,7 +113,7 @@ $(document).ready(function() {
 
     bulmaSlider.attach();
 
-    var videoList = document.getElementsByTagName("img");
+    var videoList = document.getElementsByTagName("video");
     for (const video of videoList) {
 			observer.observe(video)
 		}
