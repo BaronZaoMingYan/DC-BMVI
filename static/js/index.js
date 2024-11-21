@@ -1,12 +1,12 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
 // var INTERP_BASE = ;
-var NUM_INTERP_FRAMES = 40;
+var NUM_INTERP_FRAMES = 48;
 
 var interp_images = [];
 function preloadInterpolationImages() {
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = "./static/interpolation/stacked/" + String(i).padStart(6, '0') + '.jpg';
+    var path = "./static/interpolation/3d_vis/" + "000000"+String(i).padStart(2, '0') + '.jpg';
     interp_images[i] = new Image();
     interp_images[i].src = path;
   }
@@ -89,7 +89,7 @@ $(document).ready(function() {
     for (const video of videoList) {
 			observer.observe(video)
 		}
-    
+
     // Access to bulmaCarousel instance of an element
     var element = document.querySelector('#my-element');
     if (element && element.bulmaCarousel) {
