@@ -60,11 +60,11 @@ var observer = new IntersectionObserver(function (entries) {
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
-    // $(".navbar-burger").click(function() {
-    //   // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-    //   $(".navbar-burger").toggleClass("is-active");
-    //   $(".navbar-menu").toggleClass("is-active");
-    // });
+    $(".navbar-burger").click(function() {
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+    });
 
     var options = {
 			slidesToScroll: 1,
@@ -112,5 +112,10 @@ $(document).ready(function() {
     $('#interpolation-slider2').prop('max', NUM_INTERP_FRAMES - 1);
 
     bulmaSlider.attach();
+
+    var videoList = document.getElementsByTagName("img");
+    for (const video of videoList) {
+			observer.observe(video)
+		}
 
 })
