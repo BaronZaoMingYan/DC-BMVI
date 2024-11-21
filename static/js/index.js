@@ -38,12 +38,12 @@ function setInterpolationImage2(i) {
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
-    $(".navbar-burger").click(function() {
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
+    // $(".navbar-burger").click(function() {
+    //   // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+    //   $(".navbar-burger").toggleClass("is-active");
+    //   $(".navbar-menu").toggleClass("is-active");
 
-    });
+    // });
 
     var options = {
 			slidesToScroll: 1,
@@ -84,11 +84,11 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
     preloadInterpolationImages2();
-    $('#interpolation-slider').on('input', function(event) {
+    $('#interpolation-slider2').on('input', function(event) {
       setInterpolationImage2(this.value);
     });
     setInterpolationImage2(0);
-    $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
+    $('#interpolation-slider2').prop('max', NUM_INTERP_FRAMES - 1);
 
     bulmaSlider.attach();
 
