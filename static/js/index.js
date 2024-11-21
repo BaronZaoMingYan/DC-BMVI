@@ -36,6 +36,28 @@ function setInterpolationImage2(i) {
 }
 
 
+const options2 = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5 // Trigger when img is 50% visible
+};
+var observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      	console.log(entry);
+        video = entry.target;
+        video.play();
+        //video.preload = "auto";
+        
+        console.log(video);
+    }
+      	
+      
+      // disconnect observer
+      //observer.unobserve(og_video);
+  });
+}, options2);
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
     // $(".navbar-burger").click(function() {
