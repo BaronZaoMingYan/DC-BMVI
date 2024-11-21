@@ -22,7 +22,7 @@ function setInterpolationImage(i) {
 var interp_images2 = [];
 function preloadInterpolationImages2() {
   for (var i = 0; i < NUM_INTERP_FRAMES; i++) {
-    var path = "./static/interpolation/stacked/" + String(i).padStart(6, '0') + '.jpg';
+    var path = "./static/interpolation/3d_vis/" + "000000" + String(i).padStart(2, '0') + '.png';
     interp_images2[i] = new Image();
     interp_images2[i].src = path;
   }
