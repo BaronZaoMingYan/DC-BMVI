@@ -22,7 +22,7 @@ function setInterpolationImage(i) {
 var interp_images2 = [];
 function preloadInterpolationImages2() {
   for (var i = 1; i < NUM_INTERP_FRAMES; i++) {
-    var path = "./static/interpolation/3d_vis2/" + "000000_" + String(i).padStart(2, '0') + '.png';
+    var path = "./static/interpolation/3d_vis/" + "000000_" + String(i).padStart(2, '0') + '.png';
     interp_images2[i] = new Image();
     interp_images2[i].src = path;
   }
@@ -84,7 +84,7 @@ $(document).ready(function() {
     setInterpolationImage(0);
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
-    // bulmaSlider.attach();
+    bulmaSlider.attach();
 
     preloadInterpolationImages2();
     $('#interpolation-slider2').on('input', function(event) {
