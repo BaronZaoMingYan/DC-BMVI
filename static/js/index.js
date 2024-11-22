@@ -94,7 +94,7 @@ $(document).ready(function() {
     preloadInterpolationImages2();
 
     $('#interpolation-slider2').on('input', function(event) {
-      setInterpolationImage(this.value);
+      setInterpolationImage2(this.value);
     });
     setInterpolationImage2(0);
     $('#interpolation-slider2').prop('max', NUM_INTERP_FRAMES - 1);
