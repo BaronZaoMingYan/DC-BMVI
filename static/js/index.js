@@ -1,6 +1,6 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-// var INTERP_BASE = ;
+// var INTERP_BASE = "./static/interpolation/stacked";
 var NUM_INTERP_FRAMES = 48;
 
 var interp_images = [];
@@ -19,21 +19,22 @@ function setInterpolationImage(i) {
   $('#interpolation-image-wrapper').empty().append(image);
 }
 
-var interp_images2 = [];
+var interp_images = [];
 function preloadInterpolationImages2() {
   for (var i = 1; i < NUM_INTERP_FRAMES; i++) {
     var path = "./static/interpolation/3d_vis2/" + "000000_" + String(i).padStart(2, '0') + '.png';
-    interp_images2[i] = new Image();
-    interp_images2[i].src = path;
+    interp_images[i] = new Image();
+    interp_images[i].src = path;
   }
 }
 
 function setInterpolationImage2(i) {
-  var image = interp_images2[i];
+  var image = interp_images[i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
   $('#interpolation-image-wrapper2').empty().append(image);
 }
+
 
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
@@ -41,6 +42,7 @@ $(document).ready(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
       $(".navbar-burger").toggleClass("is-active");
       $(".navbar-menu").toggleClass("is-active");
+
     });
 
     var options = {
@@ -63,11 +65,6 @@ $(document).ready(function() {
     	});
     }
 
-    // var videoList = document.getElementsByTagName("video");
-    // for (const video of videoList) {
-		// 	observer.observe(video)
-		// }
-
     // Access to bulmaCarousel instance of an element
     var element = document.querySelector('#my-element');
     if (element && element.bulmaCarousel) {
@@ -77,7 +74,15 @@ $(document).ready(function() {
     	});
     }
 
+    /*var player = document.getElementById('interpolation-video');
+    player.addEventListener('loadedmetadata', function() {
+      $('#interpolation-slider').on('input', function(event) {
+        console.log(this.value, player.duration);
+        player.currentTime = player.duration / 100 * this.value;
+      })
+    }, false);*/
     preloadInterpolationImages();
+
     $('#interpolation-slider').on('input', function(event) {
       setInterpolationImage(this.value);
     });
@@ -87,14 +92,14 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
     preloadInterpolationImages2();
+
     $('#interpolation-slider2').on('input', function(event) {
-      setInterpolationImage2(this.value);
+      setInterpolationImage(this.value);
     });
     setInterpolationImage2(0);
     $('#interpolation-slider2').prop('max', NUM_INTERP_FRAMES - 1);
 
     bulmaSlider.attach();
 
-
-
 })
+
