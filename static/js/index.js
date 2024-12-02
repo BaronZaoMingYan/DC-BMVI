@@ -91,7 +91,7 @@ $(document).ready(function() {
     setInterpolationImage(0);
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
-    bulmaSlider.attach();
+    // bulmaSlider.attach();
 
     preloadInterpolationImages2();
     $('#interpolation-slider2').on('input', function(event) {
