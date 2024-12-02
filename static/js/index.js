@@ -29,10 +29,10 @@ function preloadInterpolationImages2() {
 }
 
 function setInterpolationImage2(i) {
-  var image = interp_images2[i];
-  image.ondragstart = function() { return false; };
-  image.oncontextmenu = function() { return false; };
-  $('#interpolation-image-wrapper2').empty().append(image);
+  var image2 = interp_images2[i];
+  image2.ondragstart = function() { return false; };
+  image2.oncontextmenu = function() { return false; };
+  $('#interpolation-image-wrapper2').empty().append(image2);
 }
 
 
@@ -82,7 +82,6 @@ $(document).ready(function() {
       })
     }, false);*/
     preloadInterpolationImages();
-
     $('#interpolation-slider').on('input', function(event) {
       setInterpolationImage(this.value);
     });
@@ -92,7 +91,6 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
     preloadInterpolationImages2();
-
     $('#interpolation-slider2').on('input', function(event) {
       setInterpolationImage2(this.value);
     });
