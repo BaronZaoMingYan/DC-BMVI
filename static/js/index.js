@@ -82,6 +82,7 @@ $(document).ready(function() {
         player.currentTime = player.duration / 100 * this.value;
       })
     }, false);*/
+    console.log('preloadInterpolationImages')
     preloadInterpolationImages();
     $('#interpolation-slider').on('input', function(event) {
       console.log('interpolation-slider')
