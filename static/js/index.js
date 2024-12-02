@@ -19,17 +19,17 @@ function setInterpolationImage(i) {
   $('#interpolation-image-wrapper').empty().append(image);
 }
 
-var interp_images = [];
+var interp_images2 = [];
 function preloadInterpolationImages2() {
   for (var i = 1; i < NUM_INTERP_FRAMES; i++) {
     var path = "./static/interpolation/3d_vis2/" + "000000_" + String(i).padStart(2, '0') + '.png';
-    interp_images[i] = new Image();
-    interp_images[i].src = path;
+    interp_images2[i] = new Image();
+    interp_images2[i].src = path;
   }
 }
 
 function setInterpolationImage2(i) {
-  var image = interp_images[i];
+  var image = interp_images2[i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
   $('#interpolation-image-wrapper2').empty().append(image);
