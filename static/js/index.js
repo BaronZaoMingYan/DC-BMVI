@@ -16,6 +16,7 @@ function setInterpolationImage(i) {
   var image = interp_images[i];
   image.ondragstart = function() { return false; };
   image.oncontextmenu = function() { return false; };
+  console.log(interp_images[i])
   $('#interpolation-image-wrapper').empty().append(image);
 }
 
@@ -83,6 +84,7 @@ $(document).ready(function() {
     }, false);*/
     preloadInterpolationImages();
     $('#interpolation-slider').on('input', function(event) {
+      console.log('interpolation-slider')
       setInterpolationImage(this.value);
     });
     setInterpolationImage(0);
@@ -92,6 +94,7 @@ $(document).ready(function() {
 
     preloadInterpolationImages2();
     $('#interpolation-slider2').on('input', function(event) {
+      console.log('interpolation-slider2')
       setInterpolationImage2(this.value);
     });
     setInterpolationImage2(0);
