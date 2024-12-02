@@ -89,7 +89,7 @@ $(document).ready(function() {
       console.log('interpolation-slider')
       setInterpolationImage(this.value);
     });
-    setInterpolationImage(0);
+    // setInterpolationImage(0);
     $('#interpolation-slider').prop('max', NUM_INTERP_FRAMES - 1);
 
     // bulmaSlider.attach();
@@ -99,7 +99,7 @@ $(document).ready(function() {
       console.log('interpolation-slider2')
       setInterpolationImage2(this.value);
     });
-    setInterpolationImage2(0);
+    // setInterpolationImage2(0);
     $('#interpolation-slider2').prop('max', NUM_INTERP_FRAMES - 1);
 
     bulmaSlider.attach();
