@@ -38,7 +38,7 @@ function setInterpolationImage2(i) {
 
 
 $(document).ready(function() {
-    console.log('$(document).ready')
+    // console.log('$(document).ready')
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
       // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
