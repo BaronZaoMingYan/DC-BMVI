@@ -52,7 +52,7 @@
           <h1 class="title is-1 publication-title">Explicit Depth-Aware Blurry Video Frame Interpolation Guided by Differential Curves</h1>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">Paper ID -- 595 </span>
+            <span class="author-block"> </span>
           </div>
         </div>
       </div>
@@ -120,14 +120,29 @@
     </div>
     <div class="content has-text-justified">
         <p>
-Blurry video frame interpolation (BVFI), which aims to generate high-frame-rate clear videos from low-frame-rate blurry inputs, is a challenging yet significant task in computer vision. Current state-of-the-art approaches typically rely on linear or quadratic models to estimate intermediate motion. However, these methods often overlook depth-related changes, such as object size and viewing angle variations, which occur as objects move through the scene. 
-This paper proposes a novel approach to addressing this challenge by leveraging differential curves that can describe motion velocity and depth changes.
-Specifically, we introduce an explicit framework, 
-termed Differential Curve-guided Blurry Video Multi-Frame Interpolation (DC-BMFI), to eliminate the effects of depth variation caused by object motion on BVFI task.
-In contrast to existing methods that utilize optical flow for 2D awareness, we introduce an MPNet submodule within the DC-BMFI framework to estimate 3D scene flow, thereby enhancing the awareness of depth and velocity changes.
-To estimate the 3D scene flow from video frames, we propose a submodule termed UBNet to transform video frames into 3D camera space point maps and then estimate scene flow between point maps.
-Extensive experiments demonstrate that the proposed DC-BMFI surpasses state-of-the-art performance in simulated and real-world datasets.
-		</p>
+          Blurry video frame interpolation (BVFI), which aims to
+          generate high-frame-rate clear videos from low-frame-rate
+          blurry inputs, is a challenging yet significant task in com-
+          puter vision. Current state-of-the-art approaches typically
+          rely on linear or quadratic models to estimate intermedi-
+          ate motion. However, these methods often overlook depth
+          variations that occur during fast object motion, leading to
+          changes in object size and hindering interpolation perfor-
+          mance.This paper proposes the Differential Curves-guided
+          Blurry Video Frame Interpolation (DC-BVFI) framework,
+          which leverages the differential curves theory to analyze
+          and mitigate the effects of depth variations caused by ob-
+          ject motion. Specifically, DC-BVFI consists of UBNet and
+          MPNet. Unlike prior approaches that rely on optical flow
+          for frame interpolation, MPNet is designed to estimate the
+          3D scene flow, which facilitates a more precise awareness
+          of depth and velocity variations. Since scene flow cannot
+          be directly inferred in the 2D frame space, UBNet is intro-
+          duced to transform them into 3D point maps. Extensive ex-
+          periments demonstrate that the proposed DC-BVFI frame-
+          work surpasses state-of-the-art performance in simulated
+          and real-world datasets.
+        </p>
     </div>
     <div class="item">
       <img src="./static/images/intro3.png" alt="High level figure for the method">
